@@ -1,65 +1,133 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* ===== HEADER ===== */
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 26px;
+  font-weight: 600;
+  color: #3B2F2F;
 }
 
 .nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
+.nav a:hover {
+  color: #D6A77A;
+}
+
+/* ===== HERO ===== */
 .hero {
-    padding: 80px 20px;
-    text-align: center;
-    background: #eee;
+  padding: 120px 20px;
+  text-align: center;
+  background: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  ), url('../images/hero.jpg') center/cover no-repeat;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background: #444;
-    color: #fff;
-    text-decoration: none;
+  display: inline-block;
+  padding: 14px 30px;
+  background: #D6A77A;
+  color: #3B2F2F;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  background: #c89664;
+}
+
+/* ===== SECTIONS ===== */
 .categories {
-    padding: 50px;
-    text-align: center;
+  padding: 80px 50px;
+  text-align: center;
 }
 
+.categories h1,
+.categories h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* ===== GRID ===== */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
 .card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  text-align: left;
 }
 
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #3B2F2F;
+}
+
+/* ===== FOOTER ===== */
 .footer {
-    padding: 20px;
-    text-align: center;
-    background: #222;
-    color: #fff;
+  background: #3B2F2F;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
 }
